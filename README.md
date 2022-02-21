@@ -1,12 +1,13 @@
 # devops-netology_3.8
-1. route-views>show ip route 90.188.43.130   
+1. 
+route-views>show ip route 90.188.43.130   
 Routing entry for 90.188.32.0/19  
-  Known via "bgp 6447", distance 20, metric 0  
-  Tag 6939, type external  
-  Last update from 64.71.137.241 3w0d ago  
-  Routing Descriptor Blocks:  
-  * 64.71.137.241, from 64.71.137.241, 3w0d ago  
-      Route metric is 0, traffic share count is 1  
+Known via "bgp 6447", distance 20, metric 0  
+Tag 6939, type external  
+Last update from 64.71.137.241 3w0d ago  
+Routing Descriptor Blocks:  
+64.71.137.241, from 64.71.137.241, 3w0d ago  
+Route metric is 0, traffic share count is 1  
       AS Hops 2  
       Route tag 6939  
       MPLS label: none  
@@ -174,4 +175,28 @@ Paths: (23 available, best #22, table default)
       path 7FE09D59E338 RPKI State valid  
       rx pathid: 0, tx pathid: 0  
 
-2. 
+2. root@LSergeyO:~# ip link add dev dummy0 type dummy  
+root@LSergeyO:~# ip addr add 10.1.1.1/32 dev dummy0  
+![img.png](img.png)
+root@LSergeyO:~# ip route add 172.16.10.0/24 via 192.168.0.1  
+root@LSergeyO:~# ip route add 172.16.11.0/24 dev enp37s0  
+![img_1.png](img_1.png)  
+
+3. 
+- ![img_2.png](img_2.png)  
+
+cupsd - port 631  
+vmware-authdlau - port 902  
+node_exporter - port 9100  
+
+4. 
+- ![img_4.png](img_4.png)
+
+systemd-resolve - port 53  
+cups-browsed - port 631  
+
+5. 
+
+- ![img_5.png](img_5.png)
+
+
